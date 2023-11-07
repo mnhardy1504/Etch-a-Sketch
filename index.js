@@ -7,3 +7,18 @@ document.addEventListener('DOMContentLoaded', function() {
         gridContainer.appendChild(div);
     }
 });
+
+const gridDivs = document.querySelectorAll('.grid-item');  
+
+function mouseHoverStart(event) {
+    event.target.style.backgroundColor = 'red';
+}
+
+function mouseHoverEnd(event) {
+    event.target.style.backgroundColor ='lightgray';
+}
+
+gridDivs.forEach(function(div) {
+    div.addEventListener('mouseenter', mouseHoverStart);
+    div.addEventListener('mouseleave', mouseHoverEnd);
+});
