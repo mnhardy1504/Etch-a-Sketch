@@ -4,18 +4,30 @@
         <title>JS Page Load Events</title>
     </head>
 
-    <body> 
-        <div id="hello-div">
-            Hello World!
-        </div>
+    <body>
+        <h1>Hello World!</h1>
         <script>
-const bar = "hello";
+console.log("The beginning of my script");
+
 document.addEventListener('DOMContentLoaded',() => {
-    const foo = document.getElementById("hello-div");
-    console.log("DOMContentLoaded event has occured,",foo);
+    console.log("DOMContentLoaded event has occured");
 });
 
+document.addEventListener('load',() => {
+    console.log("load event has occured");
+});
 
+console.log("this is the middle of my script");
+
+document.addEventListener('beforeunload event has occured',() => {
+    console.log("beforeunload");
+});
+
+document.addEventListener('unload',() => {
+    console.log("beforeunload event has occured");
+});
+
+console.log("This is the end of my script");
         </script>
     </body>
 </html>

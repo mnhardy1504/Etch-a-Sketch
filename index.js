@@ -16,9 +16,6 @@ function enterGrid() {
      }
 }
 
-
-//document.addEventListener('DOMContentLoaded', enterGrid);
-
 function mouseHoverStart(event) {
     event.target.style.backgroundColor = 'red';
 }
