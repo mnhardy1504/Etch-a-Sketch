@@ -1,8 +1,8 @@
 
 function enterGrid() {
     let size = prompt("What number of squares per side do you want for each side of the grid?", 7);
-    document.documentElement.style.setProperty('--num-columns', size); 
     const gridContainer = document.getElementById('grid-container'); 
+    gridContainer.style.setProperty('--num-columns', size); 
     while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild); 
     };
@@ -23,3 +23,4 @@ function mouseHoverStart(event) {
 function mouseHoverEnd(event) {
     event.target.style.backgroundColor ='lightgray';
 }
+
